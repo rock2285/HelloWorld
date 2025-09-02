@@ -16,8 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from demo.views import Window
+from demo.views import Window, Away
 
 urlpatterns = [
-    path('', Window.as_view())
+    path('', Window.as_view(), name ="home"),
+    path('away/', Away.as_view(), name ="away")
 ]
